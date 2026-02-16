@@ -10,6 +10,11 @@ A comprehensive web application for managing team operations including RFI Handl
 ```bash
 git clone https://github.com/ppandey42/Enabler_Automation_Project.git
 cd Enabler_Automation_Project/ls-enabler
+
+# Optional: Verify your system first
+.\verify-system.bat
+
+# Run the automated setup
 .\setup-windows.bat
 ```
 
@@ -17,6 +22,13 @@ cd Enabler_Automation_Project/ls-enabler
 ```bash
 git clone https://github.com/ppandey42/Enabler_Automation_Project.git
 cd Enabler_Automation_Project/ls-enabler
+
+# Optional: Verify your system first  
+chmod +x verify-system.sh
+./verify-system.sh
+
+# Run the automated setup
+chmod +x setup.sh
 ./setup.sh
 ```
 
@@ -112,6 +124,15 @@ If you prefer manual setup:
    - **API Documentation**: http://localhost:8000/docs
 
 ## 🔧 Development Scripts
+
+### System Verification
+```bash
+# Windows
+.\verify-system.bat
+
+# Linux/Mac  
+./verify-system.sh
+```
 
 ### Starting Development Servers
 ```bash
