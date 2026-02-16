@@ -2,14 +2,38 @@
 
 A comprehensive web application for managing team operations including RFI Handling, REJECT Handling, FS Handling, and TRB Handling.
 
+## 🚀 Quick Start (One Command Setup)
+
+> **📖 Need detailed instructions?** See our [Complete Installation Guide](INSTALLATION.md) for step-by-step setup, troubleshooting, and system-specific notes.
+
+### For Windows Users:
+```bash
+git clone https://github.com/ppandey42/Enabler_Automation_Project.git
+cd Enabler_Automation_Project/ls-enabler
+.\setup-windows.bat
+```
+
+### For Linux/Mac Users:
+```bash
+git clone https://github.com/ppandey42/Enabler_Automation_Project.git
+cd Enabler_Automation_Project/ls-enabler
+./setup.sh
+```
+
+**That's it!** The setup script will automatically handle everything and open the application in your browser. 🎉
+
 ## Project Structure
 
 ```
 ls-enabler/
-├── frontend/          # React TypeScript application
-├── backend/           # Python FastAPI microservices
-├── docker-compose.yml # Docker orchestration
-└── README.md         # This file
+├── frontend/           # React TypeScript application
+├── backend/            # Python FastAPI microservices
+├── docker-compose.yml  # Docker orchestration
+├── setup.sh           # Linux/Mac setup script
+├── setup-windows.bat  # Windows setup script
+├── start-dev.sh       # Development server starter (Linux/Mac)
+├── start-dev.bat      # Development server starter (Windows)
+└── README.md          # This file
 ```
 
 ## Modules
@@ -34,29 +58,48 @@ ls-enabler/
 - **Review Status**: Check review progress
 - **Assign Reviewer**: Assign reviewers to documents
 
-## Quick Start
+## Prerequisites
 
-### Prerequisites
-- Node.js 18+
-- Python 3.9+
-- Docker (optional)
+### System Requirements
+- **Node.js** 18+ ([Download here](https://nodejs.org/))
+- **Python** 3.9+ ([Download here](https://www.python.org/downloads/))
+- **Git** ([Download here](https://git-scm.com/downloads))
+- **Docker** (optional, for containerized setup)
 
-### Development Setup
+### Automated Setup (Recommended)
 
-1. **Clone and setup the project:**
+The setup scripts will automatically:
+✅ Check system requirements
+✅ Install Python dependencies
+✅ Install Node.js dependencies
+✅ Create virtual environment
+✅ Start both backend and frontend servers
+✅ Open the application in your browser
+
+### Manual Setup (Advanced Users)
+
+If you prefer manual setup:
+
+1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd ls-enabler
+   git clone https://github.com/ppandey42/Enabler_Automation_Project.git
+   cd Enabler_Automation_Project/ls-enabler
    ```
 
-2. **Start the backend:**
+2. **Backend Setup:**
    ```bash
    cd backend
+   python -m venv venv
+   # Windows:
+   venv\Scripts\activate
+   # Linux/Mac:
+   source venv/bin/activate
+   
    pip install -r requirements.txt
-   uvicorn main:app --reload --port 8000
+   python main.py
    ```
 
-3. **Start the frontend:**
+3. **Frontend Setup (New Terminal):**
    ```bash
    cd frontend
    npm install
@@ -64,9 +107,29 @@ ls-enabler/
    ```
 
 4. **Access the application:**
-   - Frontend: http://localhost:5173
-   - Backend API: http://localhost:8000
-   - API Documentation: http://localhost:8000/docs
+   - **Frontend**: http://localhost:5173
+   - **Backend API**: http://localhost:8000
+   - **API Documentation**: http://localhost:8000/docs
+
+## 🔧 Development Scripts
+
+### Starting Development Servers
+```bash
+# Windows
+.\start-dev.bat
+
+# Linux/Mac
+./start-dev.sh
+```
+
+### Stopping All Servers
+```bash
+# Windows
+.\stop-servers.bat
+
+# Linux/Mac
+./stop-servers.sh
+```
 
 ### Docker Setup (Alternative)
 

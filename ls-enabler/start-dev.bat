@@ -1,25 +1,55 @@
 @echo off
-echo Starting LS ENABLER Development Servers...
+echo ===============================================
+echo    Starting LS ENABLER Development Servers
+echo ===============================================
+echo.
+
+:: Check if setup has been run
+if not exist "backend\venv" (
+    echo [ERROR] Backend environment not found!
+    echo Please run setup-windows.bat first.
+    echo.
+    pause
+    exit /b 1
+)
+
+if not exist "frontend\node_modules" (
+    echo [ERROR] Frontend dependencies not found!
+    echo Please run setup-windows.bat first.
+    echo.
+    pause
+    exit /b 1
+)
+
+echo [INFO] Starting backend server...
+start "LS ENABLER Backend" cmd /k "cd /d "%~dp0backend" && call venv\Scripts\activate.bat && python main.py"
+
+echo [INFO] Waiting for backend to initialize...
+timeout /t 8 /nobreak >nul
+
+echo [INFO] Starting frontend server...
+start "LS ENABLER Frontend" cmd /k "cd /d "%~dp0frontend" && npm run dev"
+
+echo [INFO] Waiting for servers to start...
+timeout /t 8 /nobreak >nul
+
+echo [INFO] Opening application in browser...
+start http://localhost:5173
 
 echo.
-echo [1] Starting Backend Server...
-cd /d "C:\Users\prachpan\OneDrive - AMDOCS\Desktop\Automation\ls-enabler\backend"
-start "LS ENABLER Backend" powershell -Command "cd 'C:\Users\prachpan\OneDrive - AMDOCS\Desktop\Automation\ls-enabler\backend'; python -m uvicorn main:app --reload --port 8000; Read-Host 'Press Enter to close'"
-
-timeout /t 3 /nobreak >nul
-
-echo [2] Starting Frontend Server...
-cd /d "C:\Users\prachpan\OneDrive - AMDOCS\Desktop\Automation\ls-enabler\frontend"
-start "LS ENABLER Frontend" powershell -Command "cd 'C:\Users\prachpan\OneDrive - AMDOCS\Desktop\Automation\ls-enabler\frontend'; npm run dev; Read-Host 'Press Enter to close'"
-
+echo ===============================================
+echo     LS ENABLER Development Servers Started!
+echo ===============================================
 echo.
-echo Both servers are starting in separate windows...
+echo Frontend:  http://localhost:5173
+echo Backend:   http://localhost:8000
+echo API Docs:  http://localhost:8000/docs
 echo.
-echo IMPORTANT: Wait for both servers to start, then open:
-echo   Frontend Dashboard: http://localhost:5173
-echo   Backend API: http://localhost:8000
-echo   API Documentation: http://localhost:8000/docs
+echo The application should open automatically in your browser.
 echo.
-echo If you see a blank screen, check the browser developer console (F12) for errors.
+echo To stop the servers, close the terminal windows or run:
+echo .\stop-servers.bat
+echo.
+echo Happy coding! 🚀
 echo.
 pause
