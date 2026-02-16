@@ -1,8 +1,26 @@
 {
   "name": "ls-enabler-frontend",
-  "private": true,
   "version": "1.0.0",
+  "description": "LS ENABLER Frontend - Free & Open Source Team Operations Dashboard",
   "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ppandey42/Enabler_Automation_Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ppandey42/Enabler_Automation_Project/issues"
+  },
+  "homepage": "https://github.com/ppandey42/Enabler_Automation_Project#readme",
+  "keywords": [
+    "react",
+    "typescript",
+    "vite",
+    "dashboard",
+    "open-source",
+    "team-management",
+    "operations"
+  ],
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "tsc && vite build",

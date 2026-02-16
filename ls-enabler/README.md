@@ -1,6 +1,13 @@
-# LS ENABLER
+# LS ENABLER 🚀
 
-A comprehensive web application for managing team operations including RFI Handling, REJECT Handling, FS Handling, and TRB Handling.
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
+[![GitHub Stars](https://img.shields.io/github/stars/ppandey42/Enabler_Automation_Project?style=social)](https://github.com/ppandey42/Enabler_Automation_Project/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/ppandey42/Enabler_Automation_Project?style=social)](https://github.com/ppandey42/Enabler_Automation_Project/network)
+
+A **completely free and open source** web application for managing team operations including RFI Handling, REJECT Handling, FS Handling, and TRB Handling.
+
+> 🌟 **This project is 100% free to use, modify, and distribute!** No restrictions, no licensing fees, no attribution required.
 
 ## 🚀 Quick Start (One Command Setup)
 
@@ -198,13 +205,40 @@ Copy `.env.example` to `.env` and configure:
 - CORS settings
 - File upload paths
 
-## Contributing
+## 🤝 Contributing
 
-1. Create a feature branch
-2. Make your changes
-3. Add tests
-4. Submit a pull request
+We welcome contributions from everyone! Here's how you can help:
 
-## License
+### How to Contribute
+1. **Fork the repository** on GitHub
+2. **Clone your fork** locally
+3. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
+4. **Make your changes** and test them thoroughly
+5. **Commit your changes** (`git commit -m 'Add amazing feature'`)
+6. **Push to your branch** (`git push origin feature/amazing-feature`)
+7. **Create a Pull Request** on GitHub
 
-Internal use only - Amdocs Corporation
+### Contribution Guidelines
+- 📝 Write clear, concise commit messages
+- 🧪 Add tests for new features
+- 📚 Update documentation as needed
+- 🎨 Follow existing code style and conventions
+- 🐛 Report bugs by creating GitHub issues
+- 💡 Suggest new features via GitHub discussions
+
+### Development Setup
+Follow the [Installation Guide](INSTALLATION.md) to set up your development environment.
+
+## 📄 License
+
+This project is **completely free and open source** under the [MIT License](LICENSE).
+
+**You are free to:**
+- ✅ Use this software for any purpose (personal, commercial, educational)
+- ✅ Modify and distribute the software
+- ✅ Include it in proprietary software
+- ✅ Sell copies or include it in paid products
+
+**No restrictions, no attribution required!**
+
+See the [LICENSE](LICENSE) file for full details.
