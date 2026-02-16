@@ -1,0 +1,25 @@
+# AI Chatbot Dependencies for LS Enabler
+
+# Core AI Dependencies
+ollama
+chromadb>=0.4.15
+sentence-transformers>=2.2.2
+langchain>=0.1.0
+langchain-community>=0.0.10
+
+# Vector Storage
+faiss-cpu>=1.7.4
+numpy>=1.24.0
+
+# Document Processing
+pypdf>=3.15.0
+python-docx>=0.8.11
+markdown>=3.4.4
+
+# Additional utilities
+aiofiles>=23.0.0
+python-multipart>=0.0.6
+
+# Optional: GPU acceleration (if you have NVIDIA GPU)
+# torch>=2.0.0
+# sentence-transformers[torch]

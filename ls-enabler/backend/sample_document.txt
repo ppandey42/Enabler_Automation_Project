@@ -1,0 +1,36 @@
+ADJ1DISPEOC Job Failure Troubleshooting Guide
+
+Overview:
+ADJ1DISPEOC is a critical batch job that processes adjustment dispositions for end-of-cycle operations.
+
+Common Failure Scenarios:
+1. Database Connection Issues
+   - Workaround: Restart the database service and retry the job
+   - Check database locks and resolve any blocking processes
+
+2. File Processing Errors
+   - Workaround: Verify input file format and data integrity
+   - Ensure all required input files are present in the staging directory
+
+3. Memory Issues
+   - Workaround: Increase memory allocation for the job
+   - Clear temporary files and restart with higher memory settings
+
+4. Network Connectivity Problems
+   - Workaround: Check network connectivity to remote systems
+   - Verify firewall rules and proxy settings
+
+5. Configuration Issues
+   - Workaround: Validate job configuration parameters
+   - Check environment variables and system settings
+
+Immediate Actions for Job Failure:
+1. Check job logs for specific error messages
+2. Verify system resources (CPU, memory, disk space)
+3. Restart dependent services if needed
+4. Contact system administrator if issue persists
+
+For ADJ1DISPEOC specific issues:
+- Check the adjustment disposition files are properly formatted
+- Ensure end-of-cycle processing prerequisites are met
+- Verify batch job scheduling configuration
